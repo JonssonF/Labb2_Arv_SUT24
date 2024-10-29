@@ -3,9 +3,13 @@
     public class Rabbit : Animal
     {
         public string Gender { get; set; } = "unknown";
-        public bool Male { get; private set; }
 
-        public Rabbit(string name = "unknown", string gender = "unknown", int age = 0, double weight = 0, int amountlegs = 0, bool meatEater = false, bool isWild = false, bool prey = true) 
+        public Rabbit()
+        {
+                
+        }
+
+        public Rabbit(string name, string gender, int age, double weight, int amountlegs, bool meatEater, bool isWild, bool prey) 
         : base(name, age, weight, amountlegs, meatEater, isWild, prey)
         {
             Gender = gender;
