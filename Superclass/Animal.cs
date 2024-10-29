@@ -9,7 +9,12 @@
         public bool MeatEater { get; set; } = false;
         public bool IsWild { get; set; } = false;
         public bool Prey { get; set; } = false;
-        
+
+        public Animal()
+        {
+
+        }
+
 
         public Animal(string name, int age, double weight, int amountlegs, bool meatEater, bool isWild, bool prey)
         {

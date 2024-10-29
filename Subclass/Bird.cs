@@ -1,11 +1,16 @@
 ﻿namespace Labb2_Arv_SUT24.Subclass
 {
-    internal class Bird : Animal
+    public class Bird : Animal
     {
 
-        public string IsAirbourne { get; set; } = "unkown";
+        public bool IsAirbourne { get; set; } = false;
 
-        public Bird(string name = "unknown", string isAirbourne = "unknown", int age = 0, double weight = 0, int amountlegs = 0, bool meatEater = false, bool isWild = false, bool prey = true)
+        public Bird()
+        {
+
+        }
+
+        public Bird(string name, bool isAirbourne, int age, double weight, int amountlegs, bool meatEater, bool isWild, bool prey)
         : base(name, age, weight, amountlegs, meatEater, isWild, prey)
         {
             IsAirbourne = isAirbourne;
@@ -15,6 +20,19 @@
         public override void MakeSound()
         {
             base.MakeSound();
+            Console.Write("screech!");
+        }
+
+        public override void IsHunted()
+        {
+            if(IsAirbourne == true)
+            {
+                Console.WriteLine($"{Name} detects a threat and lift off to the sky!");
+            }
+            else
+            {
+                Console.WriteLine($"{Name} runs as fast as he cans but doesnt stand a chance to the fierce predator.");
+            }
         }
     }
 }
