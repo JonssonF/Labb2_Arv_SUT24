@@ -2,16 +2,16 @@
 {
     public class Animal
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public double Weight { get; set; }
-        public int AmountLegs { get; set; }
-        public static bool MeatEater { get; set; }
-        public bool IsWild { get; set; }
-        public bool Prey { get; set; }
-        public bool MeatEeater { get; private set; }
+        public string Name { get; set; } = "unknown";
+        public int Age { get; set; } = 0;
+        public double Weight { get; set; } = 0;
+        public int AmountLegs { get; set; } = 0;
+        public bool MeatEater { get; set; } = false;
+        public bool IsWild { get; set; } = false;
+        public bool Prey { get; set; } = false;
+        
 
-        public Animal(string name = "unknown", int age = 0, double weight = 0, int amountlegs = 0, bool meatEater = false, bool isWild = false, bool prey = false)
+        public Animal(string name, int age, double weight, int amountlegs, bool meatEater, bool isWild, bool prey)
         {
             Name = name;
             Age = age;
@@ -36,22 +36,21 @@
                 Console.WriteLine($"{Name} is eating a salad.");
             }
         }
-        public void Tame()
+        public virtual void Tame()
+        
         {
-            if (IsWild == true)
-            {   if (MeatEeater == true)
-                {
+            if (IsWild == true && MeatEater == true)
+            {
                 Console.WriteLine($"I would be careful aproaching this one. {Name} can bite.");
-                }
-                else
-                {
+            }
+            else if (IsWild == true && MeatEater == false)
+            {
                 Console.WriteLine($"Even if {Name} were found in the wild," +
                     $" {Name} is trained to be a pet.");
-                }
             }
-            else 
+            else
             {
-                    Console.WriteLine($"You have nothing to worry about, u can pet {Name}.");
+                Console.WriteLine($"You have nothing to worry about, u can pet {Name}.");
             }
         }
         public void Plays()
