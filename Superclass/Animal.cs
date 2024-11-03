@@ -59,17 +59,18 @@
             }
         }
         public void Plays()
-        {   if(Prey == false && MeatEater == true)
+        {   
+            if (Weight > 50)
+            {
+                Console.WriteLine($"{Name} is too tired to play.");
+            }
+            else if(Prey == false && MeatEater == true)
             {
                 Console.WriteLine($"{Name} found a prey to play with. . . Only to become a snack after.");
             }
             else if (Prey == false && MeatEater == false)
             {
                 Console.WriteLine($"{Name} found a prey to play with. Just for fun.");
-            }
-            else if (Weight > 50)
-            {
-                Console.WriteLine($"{Name} is too tired to play.");
             }
             else
             {

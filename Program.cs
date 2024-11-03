@@ -7,7 +7,7 @@ namespace Labb2_Arv_SUT24 // Fredrik Jonsson
     {
         static void Main(string[] args)
         {
-
+            // Different methods to step through the animals in the program.
             Console.WriteLine("\t\tLABB 2 :: ARV\n\n" +
             "Press any key to watch some animals and a selection of their behaviours.\n");
             Console.ReadKey();
