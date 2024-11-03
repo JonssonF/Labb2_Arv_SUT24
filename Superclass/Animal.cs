@@ -2,6 +2,7 @@
 {
     public class Animal
     {
+        //Genereal Field/Properties for the animal class.
         public string Name { get; set; } = "unknown";
         public int Age { get; set; } = 0;
         public double Weight { get; set; } = 0;

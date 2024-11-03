@@ -4,7 +4,7 @@
     {
        
         
-        public string FurColor { get; private set; }
+        public string FurColor { get; set; }
         private static Random random = new Random();
         public Bear()
         {
@@ -16,7 +16,7 @@
         {
             FurColor = furColor();
         }
-        private string furColor()
+        private string furColor() // Random fur color, instead of a default value.
         {
             string[] colors = { "black", "white", "grey", "brown" };
             int index = random.Next(colors.Length);
@@ -25,7 +25,7 @@
         
             
             
-        public void Color()
+        public void Color() // Method to check the bear color of the fur.
         {
             int idle;
             idle = DateTime.Now.Month;
@@ -34,7 +34,7 @@
             {
                 Console.WriteLine($"{Name} lives on the arctic, and you guessed it, the fur is {FurColor}.");
             }
-            else if (idle >= 10 || idle <= 4)
+            else if (idle >= 10 || idle <= 4) // Condition to check the color, wont be avaible if the bear is in hibernation.
             {
                 Console.WriteLine($"{Name} is in hibernation, we will have to wait.");
             }
@@ -57,12 +57,12 @@
             int idle;
             idle = DateTime.Now.Month;
 
-            if (idle >= 10 || idle <= 4)
+            if (idle >= 10 || idle <= 4) // Hibernation = Asleep.
             {
                 Console.WriteLine("**Intense snooring**");
                 Console.WriteLine("ZZZzzzZzZZzzzZZzz. . .");
             }
-            else
+            else // Not in hibernation = roar.
             {
                 Console.WriteLine($"{Name} let's out a fierce roar!");
             }

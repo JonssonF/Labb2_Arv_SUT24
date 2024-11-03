@@ -16,7 +16,7 @@
             Speed = speed;
         }
 
-        public void Nest()
+        public void Nest() // Displays what a roadrunner uses for building nests.
         {
             Console.WriteLine("The roadrunner collect's some sticks to build a nest for itself.");
         }

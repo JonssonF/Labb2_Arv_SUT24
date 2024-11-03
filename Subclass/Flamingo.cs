@@ -24,12 +24,16 @@ namespace Labb2_Arv_SUT24
             {
                 Console.WriteLine($"Looks like {Name} belongs to a zoo.");
             }
+            else if (IsAirbourne == true)
+            {
+                Console.WriteLine($"{Name} sees a threat and takes of to the skies!");
+            }
             else
             {
                 Console.WriteLine($"{Name} does not fear alot of predators, Flamingoes biggest threat is loss of natural habitat.");
             }
         }
-        public void Preen()
+        public void Preen() // Special flamingo method.
         {
             Console.WriteLine($"{Name} starts distributing oil from a gland at the base of their tail to their feathers for waterproofing. \n(True story) ");
         }
